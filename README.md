@@ -7,3 +7,4 @@
 ## Davi Galdino
 
 * comando GIT push
+* comando GIT pull
