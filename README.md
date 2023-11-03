@@ -5,3 +5,5 @@
 ## Curso Digital/versionamento
 
 ## Davi Galdino
+
+* comando GIT push
