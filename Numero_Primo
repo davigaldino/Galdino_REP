@@ -1,0 +1,36 @@
+# Definir uma função para verificar se um número é primo
+def eh_primo(n):
+  # Se o número for menor que 2, não é primo
+  if n < 2:
+    return False
+  # Se o número for 2, é primo
+  if n == 2:
+    return True
+  # Se o número for par, não é primo
+  if n % 2 == 0:
+    return False
+  # Testar os divisores ímpares até a raiz quadrada do número
+  for i in range(3, int(n**0.5) + 1, 2):
+    # Se encontrar um divisor, não é primo
+    if n % i == 0:
+      return False
+  # Se não encontrar nenhum divisor, é primo
+  return True
+
+# Pedir ao usuário o limite inferior do intervalo
+limite_inferior = int(input("Digite o limite inferior do intervalo: "))
+
+# Pedir ao usuário o limite superior do intervalo
+limite_superior = int(input("Digite o limite superior do intervalo: "))
+
+# Criar uma lista vazia para armazenar os números primos
+primos = []
+
+# Percorrer os números no intervalo
+for n in range(limite_inferior, limite_superior + 1):
+  # Se o número for primo, adicionar à lista
+  if eh_primo(n):
+    primos.append(n)
+
+# Exibir os números primos encontrados
+print("Os números primos no intervalo são:", primos)
