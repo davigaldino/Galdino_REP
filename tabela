@@ -1,0 +1,22 @@
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+
+# URL do site
+url = "https://www.cbf.com.br/futebol-brasileiro/competicoes/campeonato-brasileiro-serie-a/2023"
+
+# Fazendo a requisição para o site
+resposta = requests.get(url)
+
+# Criando o objeto BeautifulSoup
+soup = BeautifulSoup(resposta.text, 'html.parser')
+
+# Encontrando a tabela no site
+tabela = soup.find_all('table') 
+
+# Lendo a tabela com o pandas
+df = pd.read_html(str(tabela))
+
+# Imprimindo o dataframe
+print(df[0])
+
