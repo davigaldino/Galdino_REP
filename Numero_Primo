@@ -1,5 +1,5 @@
 # Definir uma função para verificar se um número é primo
-def eh_primo(n):
+def primo(n):
   # Se o número for menor que 2, não é primo
   if n < 2:
     return False
@@ -18,18 +18,18 @@ def eh_primo(n):
   return True
 
 # Pedir ao usuário o limite inferior do intervalo
-limite_inferior = int(input("Digite o limite inferior do intervalo: "))
+inferior = int(input("Digite o limite inferior do intervalo: "))
 
 # Pedir ao usuário o limite superior do intervalo
-limite_superior = int(input("Digite o limite superior do intervalo: "))
+superior = int(input("Digite o limite superior do intervalo: "))
 
 # Criar uma lista vazia para armazenar os números primos
 primos = []
 
 # Percorrer os números no intervalo
-for n in range(limite_inferior, limite_superior + 1):
+for n in range(inferior, superior + 1):
   # Se o número for primo, adicionar à lista
-  if eh_primo(n):
+  if primo(n):
     primos.append(n)
 
 # Exibir os números primos encontrados
