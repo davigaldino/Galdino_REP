@@ -1,10 +1,3 @@
-# Galdino_REP/teste
+# Galdino_REP
 
-## Salvando alterações
-
-## Curso Digital/versionamento
-
-## Davi Galdino
-
-* comando GIT push
-* comando GIT pull
+Projetos para iniciante em Python
